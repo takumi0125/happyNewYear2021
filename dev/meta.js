@@ -72,7 +72,7 @@ const config = {
 
   production: {
     siteUrl: 'https://2021.unshift.jp/',
-    ogImage: 'https://2021.unshift.jp/assets/img/ogp.png'
+    ogImage: 'https://2021.unshift.jp/assets/img/ogp.jpg'
   }
 };
 
