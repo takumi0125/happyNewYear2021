@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+[v-cloak] {
+  visibility: hidden;
+}
+
+
+.u-svgDef {
+  width: 0;
+  height: 0;
+  z-index: -1000;
+  position: absolute;
+  overflow: hidden;
+
+  svg {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.u-upperCase {
+  text-transform: uppercase;
+}
+
+
+.u-visibleBlockS {
+  display: block !important;
+
+  @include sizeL {
+    display: none !important;
+  }
+}
+
+
+.u-visibleBlockL {
+  display: none !important;
+
+  @include sizeL {
+    display: block !important;
+  }
+}
+
+.u-visibleBlockM {
+  display: none;
+
+  @include sizeM {
+    display: block !important;
+  }
+}
+
+.u-visibleInlineS {
+  display: inline !important;
+
+  @include sizeL {
+    display: none !important;
+  }
+}
+
+
+.u-visibleInlineL {
+  display: none !important;
+
+  @include sizeL {
+    display: inline !important;
+  }
+}
+
+
+.u-visibleInlineBlockS {
+  display: inline-block !important;
+
+  @include sizeL {
+    display: none !important;
+  }
+}
+
+.u-visibleInlineBlockL {
+  display: none !important;
+
+  @include sizeL {
+    display: inline-block !important;
+  }
+}
+
+
+.u-visibleFlexS {
+  display: flex !important;
+
+  @include sizeL {
+    display: none !important;
+  }
+}
+
+.u-visibleFlexL {
+  display: none !important;
+
+  @include sizeL {
+    display: flex !important;
+  }
+}
+
+
+.u-visibleInlineFlexS {
+  display: inline-flex !important;
+
+  @include sizeL {
+    display: none !important;
+  }
+}
+
+.u-visibleInlineFlexL {
+  display: none !important;
+
+  @include sizeL {
+    display: inline-flex !important;
+  }
+}
+
+.u-noTxtTransform {
+  text-transform: none;
+}
+
+.u-noWrap {
+  white-space: nowrap;
+}
+
+
+.u-windowSpacer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}

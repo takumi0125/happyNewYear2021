@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+// reset box-sizing to border-box
+html {
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+  display: block;
+  // overflow-y: scroll;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+main, section {
+  display: block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  outline: none;
+
+  &:focus:hover {
+    outline: none;
+  }
+}
+input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+svg {
+  transform-box: fill-box;
+}
+
+body {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  background-color: #ffd1d1;
+  color: #000;
+  font-family: "Wendy One", sans-serif;
+  // font-feature-settings: "palt";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+*::selection {
+}

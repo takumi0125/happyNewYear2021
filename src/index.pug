@@ -1,0 +1,25 @@
+//- src/assets/_layout/default.pugを継承
+extends /assets/_layout/default
+
+//- meta設定
+block vars
+  //- その他変数
+  - bodyClass = 'is-index';  //- bodyタグに付与するクラス
+  - contentsId = 'index'
+
+//- ページ個別のCSS
+block css
+
+//- ページ個別のJS(head)
+block scriptHead
+
+//- ページ個別のJS
+block script
+  script(src="/assets/js/index.js" defer)
+
+//- ここからコンテンツ部分を記述
+block contents
+  section.p-main.js-main
+    canvas
+
+

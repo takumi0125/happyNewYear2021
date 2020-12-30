@@ -1,0 +1,24 @@
+.p-rootLoading {
+  @include fixedTopLeft;
+  width: 100%;
+  height: 100%;
+  background-color: #ffd1d1;
+  z-index: 1000;
+}
+
+.rootLoading-enter-active,
+.rootLoading-leave-active {
+  transition: opacity 0.4s linear,
+              visibility 0.4s linear;
+}
+
+.rootLoading-enter,
+.rootLoading-leave-to {
+  opacity: 0;
+  visibility: hidden;
+}
+.rootLoading-enter-to,
+.rootLoading-leave {
+  opacity: 1;
+  visibility: visible;
+}
