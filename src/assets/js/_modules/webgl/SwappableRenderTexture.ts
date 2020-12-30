@@ -7,7 +7,7 @@ import { RawShaderMaterial  } from 'three/src/materials/RawShaderMaterial' ;
 import { OrthographicCamera } from 'three/src/cameras/OrthographicCamera'  ;
 import { Scene              } from 'three/src/scenes/Scene'                ;
 import { Vector2            } from 'three/src/math/Vector2'                ;
-import { UnsignedByteType, FloatType } from 'three/src/constants';
+import { UnsignedByteType, FloatType, HalfFloatType } from 'three/src/constants';
 
 
 export default class SwappableRenderTexture {
@@ -39,8 +39,10 @@ export default class SwappableRenderTexture {
     ];
     // this.renderTargets[0].texture.flipY = false;
     this.renderTargets[0].texture.generateMipmaps = false;
+    this.renderTargets[0].texture.type = HalfFloatType;
     // this.renderTargets[1].texture.flipY = false;
     this.renderTargets[1].texture.generateMipmaps = false;
+    this.renderTargets[1].texture.type = HalfFloatType;
     // this.renderTargets[0].texture.needsUpdate = true;
     // this.renderTargets[1].texture.needsUpdate = true;
 

@@ -20,7 +20,7 @@
   color: $colorGray;
 
   @include styleS((
-    font-size: 24,
+    font-size: 20,
   ));
 
   .is-noWebGL & {

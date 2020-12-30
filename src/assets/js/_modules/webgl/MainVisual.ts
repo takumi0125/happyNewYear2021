@@ -61,7 +61,7 @@ export default class MainVisual extends WebGLBase {
     super.initRenderer();
 
     const gl = (this.renderer as WebGL1Renderer).getContext();
-    if(!gl || !gl.getExtension('WEBGL_depth_texture') && !gl.getExtension('WEBKIT_WEBGL_depth_texture')) {
+    if(!gl || (!gl.getExtension('WEBGL_depth_texture') && !gl.getExtension('WEBKIT_WEBGL_depth_texture')) || !gl.getExtension('OES_texture_half_float')) {
       this.isNoWebGL = true;
       throw Error('not support webgl extension');
     }

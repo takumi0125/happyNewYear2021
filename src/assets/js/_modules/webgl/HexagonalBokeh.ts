@@ -91,6 +91,7 @@ export default class HexagonalBokeh {
       this.width, this.height, this.renderer,
       this.blurMaterial,
       {
+        // type: HalfFloatType
         type: HalfFloatType
       },
       this.planeGeometry
