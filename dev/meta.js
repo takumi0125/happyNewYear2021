@@ -15,7 +15,7 @@ const config = {
 
     keywords: '',
 
-    description: "Wishing you a Happy New Year!",
+    description: "Wishing you good health and happiness!",
     useDescriptionAsOgDescription: true, // ogDescriptionをdescriptionと同じにするかどうか
     ogDescription: "",
 
