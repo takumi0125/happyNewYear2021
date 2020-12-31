@@ -92,7 +92,6 @@ export default class HexagonalBokeh {
       this.blurMaterial,
       {
         // type: HalfFloatType
-        type: HalfFloatType
       },
       this.planeGeometry
     );

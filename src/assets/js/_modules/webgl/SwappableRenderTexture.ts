@@ -39,10 +39,10 @@ export default class SwappableRenderTexture {
     ];
     // this.renderTargets[0].texture.flipY = false;
     this.renderTargets[0].texture.generateMipmaps = false;
-    this.renderTargets[0].texture.type = HalfFloatType;
+    // this.renderTargets[0].texture.type = HalfFloatType;
     // this.renderTargets[1].texture.flipY = false;
     this.renderTargets[1].texture.generateMipmaps = false;
-    this.renderTargets[1].texture.type = HalfFloatType;
+    // this.renderTargets[1].texture.type = HalfFloatType;
     // this.renderTargets[0].texture.needsUpdate = true;
     // this.renderTargets[1].texture.needsUpdate = true;
 
