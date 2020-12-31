@@ -1,3 +1,5 @@
+const g:any = window[ENV.projectName] = window[ENV.projectName] || {};
+
 import { WebGL1Renderer    } from 'three/src/renderers/WebGL1Renderer'            ;
 import { PlaneGeometry     } from 'three/src/geometries/PlaneGeometry'            ;
 import { Mesh              } from 'three/src/objects/Mesh'                        ;
@@ -33,6 +35,7 @@ const MESSAGE = 'Happy New Year 2021! Wishing you good health and happiness!  ';
 // const MESSAGE = 'HAPPY NEW YEAR 2021! WISHING YOU GOOD HEALTH AND HAPPINESS!  ';
 
 export default class MainVisual extends WebGLBase {
+  protected message: string = '';
   protected hexagonalBokehLevel1!: HexagonalBokeh;
   protected hexagonalBokehLevel2!: HexagonalBokeh;
 
@@ -70,6 +73,8 @@ export default class MainVisual extends WebGLBase {
 
   protected async initContents(): Promise<any> {
     if(this.isNoWebGL) return;
+
+    this.message = g.params?.message || MESSAGE;
 
     this.renderer?.setClearColor(0xffd1d1);
     // this.setPixelRatio(1);
@@ -128,9 +133,9 @@ export default class MainVisual extends WebGLBase {
     const instanceIndices: number[] = [];
 
 
-    for (let i = 0, l = MESSAGE.length; i < l; i++) {
-      // const char = MESSAGE.charAt(i).toUpperCase();
-      const char = MESSAGE.charAt(i);
+    for (let i = 0, l = this.message.length; i < l; i++) {
+      // const char = this.message.charAt(i).toUpperCase();
+      const char = this.message.charAt(i);
       if(char === ' ') continue;
 
       const charGeometry = new TextBufferGeometry(char, {
@@ -186,7 +191,7 @@ export default class MainVisual extends WebGLBase {
       transparent: true,
       uniforms: {
         time: { value: 0 },
-        numChars: { value: MESSAGE.length },
+        numChars: { value: this.message.length },
         interval: { value: interval },
         loopOffset: { value: 500 },
         scroll: { value: 0 },
