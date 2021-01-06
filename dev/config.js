@@ -141,7 +141,7 @@ const config = {
   },
 
   //HMR
-  hmr: true,
+  hmr: false,
 
   // Split Chunks
   splitChunksCommon: {
