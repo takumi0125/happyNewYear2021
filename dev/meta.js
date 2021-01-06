@@ -1,35 +1,35 @@
 const config = {
   default: {
-    siteUrl: 'https://2021.unshift.jp/',
+    siteUrl: 'https://dev.sample.jp/',
 
     showOGP: true, // ogpタグを表示するかどうか
 
-    // author: ''
-    // copyright: ''
+    author: '',
+    copyright: '',
 
-    siteTitle: 'Happy New Year 2021 by unshift',
+    siteTitle: 'sample',
     useTitleAsOgTitle: true, // ogTitleをtitleと同じにするかどうか
     ogTitle: '',
-    useTitleSeparater: true,
+    useTitleSeparater: true, // タイトルのセパレータ デフォルトで`${title}${useTitleSeparater}${siteTitle}` となる
     titleSeparater: ' | ',
 
-    keywords: '',
+    keywords: 'sample keywords',
 
-    description: "Wishing you good health and happiness!",
+    description: "sample description.",
     useDescriptionAsOgDescription: true, // ogDescriptionをdescriptionと同じにするかどうか
     ogDescription: "",
 
     // fbAppId: ''
 
-    ogSiteName: 'Happy New Year 2021 by unshift',
+    ogSiteName: 'sample',
 
-    ogImage: 'https://2021.unshift.jp/assets/img/ogp.jpg',
-    ogImageType: 'image/jpeg',
+    ogImage: 'https://dev.sample.jp/assets/img/ogp.png',
+    ogImageType: 'image/png',
     ogImageWidth: '1200',
     ogImageHeight: '630',
 
     ogType: 'website',
-    // ogLocale: 'ja_JP',
+    ogLocale: 'ja_JP',
 
     showTwitterCard: true, // twitterCardを表示するかどうか
     twitterCardType: 'summary_large_image',
@@ -70,10 +70,9 @@ const config = {
     msAppTitleColor: '#ffffff'
   },
 
-  production: {
-    siteUrl: 'https://2021.unshift.jp/',
-    ogImage: 'https://2021.unshift.jp/assets/img/ogp.jpg'
-  }
+  // envがdevelopmentやproductionの場合に上書きする際は適宜定義する
+  // development: {},
+  // production: {},
 };
 
 module.exports = (env)=> {
